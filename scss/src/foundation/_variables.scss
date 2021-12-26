@@ -1,0 +1,98 @@
+
+/*=============================================
+=                    Colors                   =
+=============================================*/
+
+
+/* Brand Colors */
+
+$green: #5ece7b;
+$green-light: #9ee2b0;
+
+$dark: #1d1f22;
+$dark-light: #737680;
+
+
+/* Neutral colors */
+$gray: #a3a5ad;
+$gray-light: #bebfc4;
+
+$white: #FFF;
+$white-dark: #f1f2f3;
+
+
+/* Utiltiy colors */
+
+$red: #d12727;
+$red-light: #f8dedf;
+$blue: #0468db;
+$blue-light: #b4d2f4;
+
+
+/*=====  End of Color  ======*/
+
+
+
+/*=============================================
+=                  Typography                 =
+=============================================*/
+
+/* Font Families */ 
+$playfair: "Playfair", serif;
+$raleway: "Raleway", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+
+
+/* Font Sizes */
+$fs-xs: 0.75rem; // 12 px;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-lg: 1.125rem;
+$fs-xl: 1.5 rem;
+
+
+/* Heading */
+$h-1: 1.375rem;
+$h-2: 1.375rem;
+$h-3: 1rem;
+$h-4: 1.125rem;
+$h-5: 0.75rem;
+$h-6: 0.75rem;
+
+
+/* Font Weight */
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+
+/*=====  End of Typoprahgy  ======*/
+
+
+
+/*=============================================
+=                   Breakpoints              =
+=============================================*/
+
+$breakpoints: (
+    md: 48rem,
+    lg: 64rem,
+    xl: 80rem    
+)
+
+
+/*=====  End of Breakpoints  ======*/
+
+
+
+
+
+
+
+
+
+
+
