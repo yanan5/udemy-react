@@ -23,6 +23,6 @@
     }
   },
   "lint-staged": {
-    "*.scss": "yarn lint:fix"
+    "src/**/*.scss": "yarn lint:fix"
   }
 }
