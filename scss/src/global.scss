@@ -2,13 +2,16 @@
 =                  Foundations               =
 =============================================*/
 
-@import "foundation/all";
+@import 'foundation/all';
 
 /*=============================================
 =                   Base                     =
 =============================================*/
 
 /* css-reset */
-@import "base/reset";
+@import 'base/reset';
 /* root */
-@import "base/root";
+@import 'base/root';
+
+body {
+}

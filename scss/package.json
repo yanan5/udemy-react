@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
     "normalize-scss": "^7.0.1",
     "prettier": "^2.5.1",
     "stylelint": "^14.2.0",
@@ -14,5 +16,13 @@
   "scripts": {
     "lint": "stylelint ./**/*.scss",
     "lint:fix": "yarn lint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.scss": "yarn lint:fix"
   }
 }
