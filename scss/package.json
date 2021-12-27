@@ -17,11 +17,6 @@
     "lint:fix": "yarn lint --fix",
     "prepare": "cd .. && husky install scss/.husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.scss": "yarn lint:fix"
   },
