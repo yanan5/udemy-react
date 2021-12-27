@@ -12,7 +12,7 @@
     "stylelint-prettier": "^2.0.0"
   },
   "scripts": {
-    "lint": "stylelint './**/*.scss'",
+    "lint": "stylelint ./**/*.scss",
     "lint:fix": "yarn lint --fix"
   }
 }
