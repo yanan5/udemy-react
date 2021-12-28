@@ -7,12 +7,14 @@ const getComponents = () => {
   const types = ['atoms', 'molecules', 'organisms'];
 
   types.forEach(type => {
-    const allFiles = fs
-      .readdirSync(`src/${type}`)
-      .map(file => path.resolve(file));
+    const allFiles = fs.readdirSync(`src/${type}`).map(file => ({
+      input: `src/${type}/${file}`,
+      output: `src/lib/${file.slice(0, -4) + 'css'}`,
+    }));
+    allComponents = [...allComponents, ...allFiles];
   });
 
-  allComponents = [...allComponents, ...allFiles];
+  return allComponents;
 };
 const compile = (path, fileName) => {
   const result = sass
@@ -24,7 +26,13 @@ const compile = (path, fileName) => {
     })
     .css.toString();
 
-  fs.writeFileSync(_path.resolve(fileName), result.css.toString());
+  fs.writeFileSync(_path.resolve(fileName), result);
 };
 
 compile('src/global.scss', 'src/lib/global.css');
+getComponents().forEach(component => {
+  console.log('component', component);
+  console.log(_path.resolve(component.input));
+  console.log(_path.resolve(component.output));
+  compile(component.input, component.output);
+});
