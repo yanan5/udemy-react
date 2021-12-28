@@ -17,6 +17,7 @@ const getComponents = () => {
   return allComponents;
 };
 const compile = (path, fileName) => {
+  console.log(path);
   const result = sass
     .renderSync({
       data: fs.readFileSync(_path.resolve(path)).toString(),
@@ -25,14 +26,10 @@ const compile = (path, fileName) => {
       includePaths: [_path.resolve('src')],
     })
     .css.toString();
-
   fs.writeFileSync(_path.resolve(fileName), result);
 };
 
 compile('src/global.scss', 'src/lib/global.css');
 getComponents().forEach(component => {
-  console.log('component', component);
-  console.log(_path.resolve(component.input));
-  console.log(_path.resolve(component.output));
   compile(component.input, component.output);
 });

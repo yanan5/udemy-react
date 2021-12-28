@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "lint-staged": "^12.1.4",
+    "node-sass": "^7.0.1",
     "normalize-scss": "^7.0.1",
     "prettier": "^2.5.1",
     "stylelint": "^14.2.0",
@@ -22,7 +23,6 @@
     "*.scss": "yarn lint:fix"
   },
   "devDependencies": {
-    "husky": "^7.0.4",
-    "node-sass": "^7.0.1"
+    "husky": "^7.0.4"
   }
 }
